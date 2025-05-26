@@ -1,0 +1,294 @@
+body{background-color: #ecd3b7 !important;}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/fon2.png');
+    background-size: 800px 700px;
+    opacity: 0.1; /* Прозрачность фона */
+    z-index: -1;
+    pointer-events: none;
+}
+.site-login {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(10px, 3vw, 30px);
+    font-family: 'EB Garamond', sans-serif;
+}
+
+.site-login h1 {
+    font-family: 'Cormorant Infant', serif;
+    font-size: clamp(36px, 6vw, 60px);
+    color: #341C0E;
+    margin-bottom: clamp(15px, 2vh, 25px);
+    animation: fadeZoomIn 0.6s ease forwards;
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+@keyframes fadeZoomIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.invalid-feedback {
+    font-size: clamp(16px, 4vw, 16px) !important;
+    margin-top: 0.5em;
+    padding-left: 0.5em;
+}
+
+@keyframes fadeInError {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.invalid-feedback {
+    display: block;
+    animation: fadeInError 0.4s ease-out forwards;
+    color: #dc3545;
+}
+.login-container {
+    background-color: #D8AF7A;
+    margin-top: clamp(50px, 12vh, 150px);
+    margin-bottom: clamp(30px, 5vh, 50px);
+    padding: clamp(20px, 4vw, 50px) clamp(30px, 8vw, 100px); /* Увеличены горизонтальные padding */
+    border-radius: clamp(20px, 3vw, 30px);
+    max-width: min(700px, 90vw);
+    width: 100%;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.title {
+    font-family: 'Cormorant Infant', serif;
+    color: #341c0e;
+    margin-bottom: clamp(15px, 2vh, 25px);
+    font-size: clamp(32px, 5vw, 48px);
+}
+
+.cupcake-image img {
+    max-width: min(250px, 50vw);
+    width: 100%;
+    margin-bottom: clamp(15px, 2vh, 25px);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeDropIn 0.8s ease forwards;
+}
+
+@keyframes fadeDropIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-container {
+    margin-top: clamp(10px, 1.5vh, 20px);
+    text-align: left;
+}
+
+.form-input {
+    width: 100%;
+    padding: clamp(10px, 1.5vh, 14px) clamp(12px, 1.5vw, 16px);
+    border-radius: clamp(8px, 1.5vw, 12px);
+    border: 1px solid #8c4a29;
+    font-size: clamp(14px, 2vw, 16px);
+    background-color: #fffaf4;
+    transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    color: #341c0e;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideIn 0.6s ease forwards;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    outline: none;
+    background-color: #fdf8f3;
+    border-color: #6e3520;
+}
+
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.site-login .form-control {
+    background-color: #fffaf4 !important;
+}
+
+.site-login .form-control:focus {
+    background-color: #fdf8f3 !important;
+}
+
+.btn-login {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background-color: #8c4a29;
+    color: white;
+    padding: clamp(10px, 1.5vh, 14px);
+    border-radius: clamp(8px, 1.5vw, 12px);
+    font-size: clamp(16px, 2.5vw, 18px);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 1;
+}
+
+.btn-login::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 60%;   
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: all 0.5s ease;
+    transform: skewX(-20deg);
+    z-index: 0;
+}
+
+.btn-login:hover::before {
+    left: 100%;
+}
+
+.btn-login:hover {
+    background-color: #7d3e2f;
+}
+
+.form-options {
+    margin-top: clamp(15px, 2.5vh, 25px);
+    text-align: center;
+}
+
+.form-options a {
+    color: #8c4a29;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: clamp(16px, 2.5vw, 18px);
+}
+
+.form-options a:hover {
+    text-decoration: underline;
+}
+
+.form-options p {
+    font-size: clamp(16px, 2.5vw, 18px);
+    margin-top: clamp(10px, 1.5vh, 15px);
+    color: #341c0e;
+}
+.password-field-wrapper {
+    position: relative;
+    margin-bottom: 2.5em; /* чтобы у ошибки было место, не двигая глаз */
+}
+.password-field-wrapper .invalid-feedback {
+    position: absolute;
+    bottom: -1.8em; /* регулируй по вкусу */
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding-left: 0.5em;
+}
+.form-group.has-feedback {
+    position: relative;
+}
+.password-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #8c4a29;
+    border-radius: clamp(8px, 1.5vw, 12px);
+    background-color: #fffaf4;
+    padding: 0 clamp(12px, 1.5vw, 16px);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.password-wrapper input {
+    flex: 1;
+    border: none;
+    padding: clamp(10px, 1.5vh, 14px) 0;
+    background: transparent;
+    font-size: clamp(14px, 2vw, 16px);
+    color: #341c0e;
+}
+
+.password-wrapper input:focus {
+    outline: none;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #8c4a29;
+    z-index: 2;
+}
+.form-input.with-eye {
+    padding-right: 40px !important; 
+}
+.flash-message.hide {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+.alert-success {
+    background-color: #8c4a29 !important;
+    color: #fff !important;
+    border: none;
+}
+
+/* Цвет текста и иконки закрытия */
+.alert-success .btn-close {
+    filter: invert(1);
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px #fffaf4 inset !important;
+    box-shadow: 0 0 0px 1000px #fffaf4 inset !important;
+    -webkit-text-fill-color: #341c0e !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+select.form-input:valid,
+select.form-input:invalid,
+input[type="file"].form-input:valid,
+input[type="file"].form-input:invalid {
+    -webkit-box-shadow: 0 0 0px 1000px #fffaf4 inset !important;
+    box-shadow: 0 0 0px 1000px #fffaf4 inset !important;
+    -webkit-text-fill-color: #341c0e !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+input.form-input.is-valid,
+input.form-input.is-invalid,
+select.form-input.is-valid,
+select.form-input.is-invalid,
+input[type="file"].form-input.is-valid,
+input[type="file"].form-input.is-invalid {
+    background-image: none !important;
+}
+/* Убираем классы Bootstrap 5 is-valid / is-invalid */
+.is-valid,
+.is-invalid,
+.was-validated .form-control:valid,
+.was-validated .form-control:invalid {
+    border-color: #8c4a29 !important;
+    box-shadow: none !important;
+    background-image: none !important;
+}

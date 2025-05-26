@@ -1,0 +1,101 @@
+.type-index {
+    background-color: #ecd3b7;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.type-index h1 {
+    font-family: 'Cormorant Infant', serif;
+    color: #341C0E;
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.type-index .btn-success {
+    background-color: #8c4a29;
+    border-color: #7d3e2f;
+    color: white;
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    padding: 8px 20px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.type-index .btn-success:hover {
+    background-color: #7d3e2f;
+    transform: translateY(-2px);
+}
+
+.grid-view {
+    background-color: #D8AF7A;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.grid-view table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.grid-view th {
+    background-color: #8c4a29;
+    color: white;
+    font-family: 'Cormorant Infant', serif;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.grid-view td {
+    background-color: #fffaf4;
+    padding: 12px 15px;
+    border-bottom: 1px solid #D8AF7A;
+    font-family: 'EB Garamond', serif;
+}
+
+.grid-view tr:hover td {
+    background-color: #f5e9d9;
+}
+
+.grid-view .action-column a {
+    color: #8c4a29;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.grid-view .action-column a:hover {
+    color: #341C0E;
+    text-decoration: none;
+}
+
+/* Стили для хлебных крошек */
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    font-family: 'EB Garamond', serif;
+}
+
+.breadcrumb li a {
+    color: #8c4a29;
+}
+
+.breadcrumb > li + li:before {
+    color: #8c4a29;
+}
+.grid-view table tr:nth-child(odd) td {
+    background-color: #d8c9b5; /* Светло-бежевый для нечетных строк */
+}
+
+.grid-view table th {
+    background-color: #9a7a51; /* Светло-бежевый для нечетных строк */
+}
+
+.grid-view table tr:nth-child(even) td {
+    background-color: #b99d79; /* Чуть темнее для четных строк */
+}
+
+.grid-view table tr:hover td {
+    background-color: #e0b57f; /* Цвет при наведении */
+}

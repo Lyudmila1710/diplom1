@@ -1,0 +1,264 @@
+main > .container {
+    padding-top: 50px;
+    padding-left: 10px;
+}
+
+header {
+    font-family: 'Cormorant Infant', serif;
+}
+.footer {
+    background-color: #f5f5f5;
+    font-size: .9em;
+    height: 60px;
+}
+.navbar-nav {
+    display: flex;
+    flex-wrap: nowrap; 
+    align-items: center;
+}
+
+.menu .nav-link {
+    color: #9a7a51 !important;
+    font-size: 1.1rem; 
+    padding: 0.5rem 0.8rem;
+    white-space: nowrap;
+    font-weight: 700;
+}
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+
+a.asc:after, a.desc:after {
+    content: '';
+    left: 3px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: solid 5px transparent;
+    margin: 4px 4px 2px 4px;
+    background: transparent;
+}
+
+a.asc:after {
+    border-bottom: solid 7px #212529;
+    border-top-width: 0;
+}
+
+a.desc:after {
+    border-top: solid 7px #212529;
+    border-bottom-width: 0;
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+.nav li > form > button.logout {
+    padding-top: 7px;
+    color: rgba(255, 255, 255, 0.5);
+}
+ 
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+@media (min-width: 2600px) {
+    .menu .navbar-brand {
+        font-weight: 700;
+        font-size: 1.9rem;
+    }
+    .menu .nav-link {
+        font-size: 2.4rem;
+    }}
+@media (min-width: 1400px) {
+    .menu .navbar-brand {
+        font-weight: 700;
+        font-size: 1.9rem;
+    }
+    
+    .menu .nav-link {
+        font-size: 1.7rem;
+    }
+}
+@media (min-width: 1200px) {
+    .menu .navbar-brand {
+        font-weight: 700;
+        font-size: 1.7rem;
+    }
+    
+    .menu .nav-link {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .menu .navbar-brand {
+        font-weight: 700;
+        font-size: 2.0rem;
+    }
+    
+    .menu .nav-link {
+        font-size: 1.9rem;
+    }
+}
+@media (max-width: 1200px) {
+    .menu .navbar-brand {
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+    
+    .menu .nav-link {
+        font-size: 1.0rem;
+    }
+}
+@media (max-width: 800px) {
+    .menu .navbar-brand {
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+    
+    .menu .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+.menu{
+    background: #191b28;
+    color:#9a7a51 !important;
+    
+}
+.menu .navbar-brand,
+.menu .nav-link,
+.menu .logout {
+    color: #9a7a51 !important;
+}
+/* Анимация для кнопок меню */
+.navbar-nav .nav-item {
+    position: relative;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #9a7a51;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+.navbar-nav .nav-item.active .nav-link {
+    position: relative;
+    color: #9a7a51 !important;
+}
+
+.navbar-nav .nav-item.active .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #9a7a51;
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+
+/* Остальные стили для меню (подчеркивание при наведении) */
+.navbar-nav .nav-item {
+    position: relative;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #9a7a51;
+    transition: width 0.3s ease;
+}
+
+/* Подчеркивание при наведении */
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Постоянное подчеркивание для активного раздела */
+.navbar-nav .nav-item.active .nav-link::after,
+.navbar-nav .nav-link.active::after {
+    width: 100% !important;
+}
+
+/* Цвет текста для активного раздела */
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-link.active {
+    color: #9a7a51 !important;
+}
+.log{
+    width: 38px;
+    height: 32px;
+}
+.navbar-brand {
+    margin-right: 4%;
+    font-size: 1.5rem; /* Фиксированный размер */
+    white-space: nowrap;
+}
+
+.input-group-text.toggle-password {
+    cursor: pointer;
+    background-color: #fff;
+    border-left: 0;
+}
+
+.input-group-text.toggle-password:hover {
+    background-color: #f8f9fa;
+}
+
+
+
+
+

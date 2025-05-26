@@ -1,0 +1,325 @@
+body{
+    padding-top: 80px;
+     background-color: #f1e3c7 !important;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/fon2.png');
+    background-size: 800px 700px;
+    opacity: 0.1; /* Прозрачность фона */
+    z-index: -1;
+    pointer-events: none;
+}
+.cart-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    font-family: 'EB Garamond', serif;
+    color: #341C0E;
+}
+
+.cart-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cart-title {
+    font-family: 'Cormorant Infant', serif;
+    font-size: 2.5rem;
+    color: #8c4a29;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.header-divider {
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #8c4a29, transparent);
+    margin: 0 auto 15px;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fffaf4;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.empty-cart-icon {
+    font-size: 60px;
+    color: #d4b483;
+    margin-bottom: 20px;
+}
+
+.empty-cart h2 {
+    color: #572f18;
+    margin-bottom: 10px;
+}
+
+.empty-cart p {
+    color: #7a5c44;
+    margin-bottom: 20px;
+}
+
+.cart-items {
+    margin-bottom: 30px;
+}
+
+.cart-item {
+    display: flex;
+    background: #fffaf4;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.item-image {
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-name {
+    font-family: 'Cormorant Infant', serif;
+    color: #8c4a29;
+    margin-bottom: 10px;
+}
+
+.item-price {
+    color: #7a5c44;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.item-actions {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-form {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    background: #f0e6d9;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.quantity-btn:hover {
+    background: #d4b483;
+    color: white;
+}
+
+.quantity-input {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    margin: 0 5px;
+    border: 1px solid #d4b483;
+    border-radius: 4px;
+}
+
+.btn-update.hidden {
+    display: none;
+}
+
+.btn-delete {
+    color: #8c4a29;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: all 0.3s;
+}
+
+.btn-delete:hover {
+    color: #d32f2f;
+}
+
+.cart-summary {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-top: 30px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.total-price {
+    color: #8c4a29;
+    font-weight: bold;
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-continue, .btn-checkout {
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+.cart-actions .btn-continue {
+    background: #f0e6d9;
+    color: #8c4a29;
+    border: 1px solid #d4b483;
+}
+
+.cart-actions .btn-continue:hover {
+    background: #d4b483;
+    color: white;
+}
+
+.cart-actions .btn-checkout {
+    background: #8c4a29;
+    color: white;
+    border: none;
+}
+
+.cart-actions .btn-checkout:hover {
+    background: #7a3e20;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(140, 74, 41, 0.3);
+}
+
+ .empty-cart .btn-cat {
+    background-color: #8c4a29;
+    border-color: #7d3e2f;
+    color: white;
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    padding: 8px 20px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.empty-cart .btn-cat:hover {
+    color: white;
+    background-color: #7d3e2f;
+    transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+    }
+    
+    .item-image {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .cart-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn-continue, .btn-checkout {
+        width: 100%;
+    }
+}
+.btn-delete {
+    background: none;
+    border: none;
+    color: #8c4a29;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+   
+}
+
+.btn-delete:hover {
+    color: #572e17; /* Темно-коричневый вместо красного */
+    background-color: rgba(210, 180, 140, 0.2); /* Легкий бежевый фон при наведении */
+}
+
+/* Убираем стандартные стили кнопки */
+.btn-delete:focus {
+    outline: none;
+    box-shadow: none;
+}
+.action-buttons {
+    display: flex;
+    align-items: center;
+    
+}
+.cart-heart {
+    width: 36px;
+    height: 36px;
+    background-color: #d4b483;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+    
+}
+
+.cart-heart i {
+    font-size: 18px;
+    color: #d1d1d1;
+    transition: all 0.3s ease;
+}
+
+.cart-heart.active i {
+    color: #ff3a30;
+}
+
+.cart-heart:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: scale(1.1);
+}
+
+.cart-heart:hover i {
+    color: #ff3a30;
+}

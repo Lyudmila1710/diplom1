@@ -1,0 +1,182 @@
+
+.type-index {
+    background-color: #ecdbb7;
+    min-height: 100vh;
+    padding: 20px;
+    padding-top: 90px;
+    font-weight: 400;
+    font-size: 18px;
+}
+.type-title {
+  font-family: 'Cormorant Infant', serif;
+  font-size: 2.5rem;
+  color: #8c4a29;
+  margin-bottom: 10px;
+  font-weight: 600;
+   text-align: center;
+}
+
+.header-divider {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #8c4a29, transparent);
+  margin: 0 auto 15px;
+}
+
+.type-index .btn-su {
+    background-color: #8c4a29;
+    border-color: #7d3e2f;
+    color: white;
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    padding: 8px 20px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.type-index .btn-su:hover {
+    color: white;
+    background-color: #7d3e2f;
+    transform: translateY(-2px);
+}
+
+.grid-view {
+ /* background-color: #D8AF7A; */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.grid-view table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.grid-view th {
+    background-color: #8c4a29;
+    color: white;
+    font-family: 'Cormorant Infant', serif;
+    padding: 12px 15px;
+    text-align: left;
+}
+.grid-view th a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.grid-view th a:hover {
+    color: #f5d1a9;
+}
+.grid-view .action-column a {
+    color: #6b2e1f;
+    font-size: 18px;
+}
+
+.grid-view .action-column a:hover {
+    color: #341C0E;
+}
+ul.pagination {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 8px;
+    font-family: 'EB Garamond', serif;
+}
+
+ul.pagination li a,
+ul.pagination li span {
+    color: #8c4a29;
+    background-color: #fff8f0;
+    margin: 0 3px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+ul.pagination li.active span {
+    background-color: #8c4a29;
+    color: rgb(158, 122, 89);
+    border-color: #8c4a29;
+}
+
+
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #d8c9b5;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) {
+    background-color: #b99d79;
+}
+.grid-view td {
+    background-color: #fffaf4;
+    padding: 12px 15px;
+    border-bottom: 1px solid #D8AF7A;
+    font-family: 'EB Garamond', serif;
+}
+
+.grid-view tr:hover td {
+    background-color: #f5e9d9;
+}
+
+.grid-view .action-column a {
+    color: #8c4a29;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.grid-view .action-column a:hover {
+    color: #341C0E;
+    text-decoration: none;
+}
+
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    font-family: 'EB Garamond', serif;
+}
+
+.breadcrumb li a {
+    color: #8c4a29;
+}
+
+.breadcrumb > li + li:before {
+    color: #8c4a29;
+}
+.grid-view table tr:nth-child(odd) td {
+    background-color: #d8c9b5;
+}
+
+.grid-view table th {
+    background-color: #9a7a51;
+}
+
+.grid-view table tr:nth-child(even) td {
+    background-color: #b99d79;
+}
+
+.grid-view table tr:hover td {
+    background-color: #e0b57f;
+}
+
+/* Стили для пагинации с коричневыми цветами */
+.pagination > .page-item.active > .page-link {
+    background-color: #8c4a29;
+    border-color: #8c4a29;
+    color: white;
+}
+a.page-link:hover {
+    color: #8c4a29 !important;
+}
+
+
+
+

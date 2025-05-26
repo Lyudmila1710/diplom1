@@ -1,0 +1,207 @@
+body {
+    background-color: #f0e7d6 !important;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/fon2.png');
+    background-size: 800px 700px;
+    opacity: 0.1;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.sirius-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    margin-top: 80px;
+    background: linear-gradient(145deg, #ccac7c, #f8f1e5);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #d4b483;
+}
+
+.sirius-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #341C0E;
+    font-family: 'Cormorant Infant', serif;
+}
+
+.sirius-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #8c4a29;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.sirius-header h2 {
+    font-size: 1.5rem;
+    color: #7a5c44;
+    font-weight: 400;
+    font-family: 'EB Garamond', serif;
+}
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+.field-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #572f18;
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.form-input {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: 2px solid #d4b483;
+    padding: 12px 15px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background-color: #fffaf4;
+    color: #341C0E;
+    font-family: 'EB Garamond', serif;
+}
+
+.form-input:focus {
+    border-color: #8c4a29;
+    box-shadow: 0 0 0 0.25rem rgba(140, 74, 41, 0.15);
+    outline: none;
+}
+
+
+.textarea-input {
+    min-height: 120px;
+    resize: vertical;
+    padding: 15px;
+}
+
+.select-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%238c4a29" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+    padding-right: 45px;
+}
+
+#order-form button[type="submit"],
+#order-form input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to right, #8c4a29, #6b3a1f);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: all 0.3s;
+    font-family: 'EB Garamond', serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: block;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#order-form button[type="submit"]:hover,
+#order-form input[type="submit"]:hover {
+    background: linear-gradient(to right, #794f45, #5a2e1a);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.sirius-divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.sirius-divider::before, .sirius-divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #d4b483;
+}
+
+.sirius-divider span {
+    padding: 0 10px;
+    color: #7a5c44;
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .sirius-container {
+        margin-top: 50px;
+        padding: 20px;
+    }
+    
+    .sirius-header h1 {
+        font-size: 2rem;
+    }
+    
+    .sirius-header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .form-input {
+        height: 45px;
+        font-size: 15px;
+    }
+    
+    .phone-input,
+    .date-input {
+        padding-left: 40px;
+        background-position: 10px center;
+    }
+}
+/* Отключаем стандартную валидацию Bootstrap */
+.is-valid,
+.is-invalid,
+.was-validated .form-control:valid,
+.was-validated .form-control:invalid,
+.form-control.is-valid,
+.form-control.is-invalid {
+    border-color: #d4b483 !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    padding-right: 15px !important;
+}
+
+/* Стили для ошибок */
+.invalid-feedback {
+    color: #8c4a29;
+    font-size: 14px;
+    margin-top: 5px;
+    font-family: 'EB Garamond', serif;
+}
+
+/* Убираем автозаполнение */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px #fffaf4 inset !important;
+    box-shadow: 0 0 0px 1000px #fffaf4 inset !important;
+    -webkit-text-fill-color: #341c0e !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
